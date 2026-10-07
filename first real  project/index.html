@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lankesh | Portfolio</title>
+    <style>
+        /* CSS WILL GO HERE */
+        /* ============ GLOBAL STYLES ============ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* This makes padding and borders NOT increase element width */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a202c;
+    line-height: 1.6;
+    background-color: #f8fafc;
+}
+
+/* This makes the smooth scroll effect when you click navbar links */
+html {
+    scroll-behavior: smooth;
+}
+/* ============ NAVBAR ============ */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #4a1d96;
+    color: white;
+    
+    /* Sticky Magic */
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Stays on top of everything */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ec4899; /* Nice cyan blue */
+}
+/* ============ HERO SECTION ============ */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 85vh; /* Takes up 85% of the screen height */
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1e293b, #0f172a); /* Cool gradient */
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color:#ec4899;
+    color: #0f172a;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ec4899;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+}
+/* ============ GENERAL SECTIONS ============ */
+.section {
+    padding: 80px 40px;
+    max-width: 1100px;
+    margin: 0 auto; /* Centers the section on the page */
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1e293b;
+}
+
+/* ============ PROJECTS GRID ============ */
+.project-grid {
+    display: grid;
+    /* Auto-fit columns: at least 280px wide, and expands to fill space */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+     /* NEW LINES: Fix anchor link styles */
+    display: block;             /* Makes it behave like a box, not a text link */
+    text-decoration: none;      /* Removes the ugly underline */
+    color: inherit;             /* Uses the page's text color, not blue */
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    border-color: #38bdf8;
+    cursor: pointer;            /* shows a hand cursor */
+}
+
+.project-card h3 {
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #64748b;
+}
+/* ============ FOOTER ============ */
+.footer {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.footer h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    margin-bottom: 8px;
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;          /* Makes it a circle */
+    border: 4px solid #38bdf8;   /* Matches your accent color */
+    object-fit: cover;           /* Prevents the image from stretching */
+    margin-bottom: 20px;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- 1. NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Lankesh.dev</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- 2. HERO SECTION -->
+     <img src="https://via.placeholder.com/150" alt="my photo" class="profile-pic">
+    <section class="hero">
+        <h1>Hi, I'm Lankesh 👋</h1>
+        <p>i like to play games</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    <!-- 3. ABOUT SECTION -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>i like to play games and code websites.</p>
+    </section>
+
+    <!-- 4. PROJECTS SECTION -->
+    <section id="projects" class="section">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            
+            <div class="project-card">
+                <h3>Blog Layout</h3>
+                <p>A semantic HTML blog skeleton with header, nav, article, and aside.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Recipe Page</h3>
+                <p>A page using nested lists and images to display a recipe.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Data Table</h3>
+                <p>A class schedule built with proper table tags (thead, tbody, tr, td).</p>
+            </div>
+             <!-- New Card 1: Contact Form -->
+<a href="http://127.0.0.1:5500/contact.html" class="project-card">
+    <h3>Contact Form</h3>
+    <p>A fully accessible contact form with labels, inputs, and a textarea.</p>
+</a>
+
+<!-- New Card 2: Recipe Page -->
+<a href="http://127.0.0.1:5500/recipe.html" class="project-card">
+    <h3>Recipe Page</h3>
+    <p>A delicious recipe displayed using images and nested lists.</p>
+</a>
+
+        </div>
+    </section>
+
+    <!-- 5. CONTACT / FOOTER -->
+    <footer id="contact" class="footer">
+        <h2>Let's Connect</h2>
+        <p>Email: lankesh@example.com</p>
+        <p>&copy; 2024 Lankesh. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
